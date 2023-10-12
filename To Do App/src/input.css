@@ -1,0 +1,143 @@
+body{
+    background-image:linear-gradient(to right, #98728480, #9DBF9E80, #D0D6B580, #F9B5AC80, #EE767480), url("./img/bg.jpg");
+    background-repeat:none;
+    background-size:cover;
+    overflow:hidden;
+}
+.container{
+    width:40%;
+    height:70%;
+    position:absolute;
+    inset:0;
+    margin:auto;
+    /*background-image:linear-gradient(to bottom right, #FDC5F5, #F7AEF8, #B388EB, #8093F1, #72DDF7);*/
+    background-color:white;
+    border-radius:30px;
+    border:rgb(105, 18, 105) 20px solid;
+    box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.658);
+    transition: 0.3s;
+    display:flex;
+    flex-direction:column;
+}
+.container:hover{
+    box-shadow: 5px 8px 16px 0 rgba(0, 0, 0, 0.842);
+}
+.logo{
+    display:inline;
+    max-width:50px;
+    width:50px;
+    height:50px;
+    text-align:center;
+    padding-left:10px;
+    padding-top: 15px;
+}
+.title{
+    display:flex;
+    padding-bottom:10px;
+    padding-top:20px;
+    padding-right:20px;
+    padding-left:20px;
+    
+}
+#title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:30px;
+}
+.tasks__adder{
+    display:flex; 
+    align-items:center;
+    justify-content:space-between;
+    background-color:#edeef0;
+    border-radius:30px;
+    padding-left:30px;
+    margin-bottom:20px;
+    height:50px;
+    width:60%;
+    margin-left:20px;
+}
+.input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-weight:14px;
+    background:transparent;
+    padding:10px;
+    
+}
+.add{
+    outline: none;
+    border:none;
+    background:#ff5945;
+    color:white;
+    padding:17px 13px;
+    font-weight: 14px;
+    font-size:14px;
+    cursor:pointer;
+    border-radius:40px;
+    
+}
+.add:hover{
+    background:rgb(148, 1, 1);
+}
+
+ul li{
+    list-style:none;
+    font-size:20px;
+    font-weight:50px;
+    font-family:'Poppins', sans-serif;
+    padding:12px 8px 12px 50px;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
+}
+ul li::before{
+    content: '';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    background-image:url('./img/radio-button.png');
+    background-size:cover;
+    background-repeat:none;
+    background-position:center;
+    top:10px;
+    left:8px;
+}
+ul li.checked{
+    color:#555;
+    text-decoration:line-through;
+}
+ul li.checked::before {
+    background-image:url('./img/checkmark.gif');
+    background-size:cover;
+    background-position:center;
+
+}
+ul li span{
+    position:absolute;
+    right:0px;
+    top:5px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    color: #555;
+    line-height:40px;
+    text-align:center;
+    border-radius:50%;
+    padding-right:5px;
+}
+ul li span:hover{
+    background-color:#edeef0;
+}
+@keyframes checkedanim{
+    0%{
+    background-image:url('./img/radio-button.png');
+    background-size:cover;
+    background-position: center;
+    }
+    100%{
+        background-image:url('./img/checkmark.gif');
+        background-size:cover;
+        background-position:center;
+    }
+}
